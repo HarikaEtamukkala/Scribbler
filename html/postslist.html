@@ -4,6 +4,11 @@
 <head>
     <!-- TODO: Include Font Awesome file here -->
     <!-- TODO: Include Google Fonts file here -->
+    <link href="https://fonts.googleapis.com/css?family=Montez|Ubuntu+Mono&display=swap" rel="stylesheet">
+  
+    <link href="../styles/common.css" rel="stylesheet">
+    <link href="../styles/postslist.css" rel="stylesheet">
+ 
 </head>
 
 <body>
@@ -12,17 +17,83 @@
     <!-- ATTENTION: The HTML code for the list of posts has been given to you. You can feel free to add/delete/modify this code. You need to write the proper CSS and JavaScript code corresponding to this page so that the result looks like the screenshots given to you in the Project Statement. -->
 
     <!-- list of all posts starts here -->
+    <div class="header" id="myHeader">
+          
+        
+        
+        <input id="signIn" class="topButtons" type="button" onclick="signInModal()" value="Sign In">
+        <input id="signUp" class="topButtons" type="button" onclick="signUpModal()" value="Sign Up">
+       <a id="pageTitle" class="logo">Scribbler</a>
+       <p class="logoText">Explore, Imagine, Create</p>
+        <!-- The Modal -->
+       
+
+        <div id="signInModal" class="modal" style="display: none;">
+            <form class="modal-content" action="/action_page.php">
+                <span onclick="onClose()" class="close_signIn" title="Close Modal">×</span>
+                <div class="container">
+                <h1>Welcome Back!</h1>
+                <hr>
+                <label for="Username" class="label">
+                    <b>Username</b>
+                </label>
+                <input type="text" placeholder="Enter Username" name="Username" required="">
+
+                <label for="psw" class="label">
+                    <b>Password</b>
+                </label>
+                <input type="password" placeholder="Enter Password" name="psw" required="">
+                <div class="clearfix">
+                    
+                    <button type="submit" class="signinbtn">Sign In</button>
+                </div>
+            </div>
+            <div id="signUpPrompt" class="signUpForm">Not a member?
+                <span id="" class="signUpForm" onclick="openSignUp()">Sign Up</span>
+            </div>
+        </form>
+    </div>
+    <div id="signUpModal" class="modal" style="display: none;">
+        <div class="modal-content-sigup">
+            <span onclick="onClose()" class="close_signIn" title="Close Modal">×</span>
+            <form class="modal-content-sigUp" action="/action_page.php">
+                <div class="container-signUp">
+
+                    <h1>Get Started</h1>
+                    <hr>
+                    <label for="name" class="label">Name</label>
+                    <input type="text" placeholder="Enter your Name" name="name" required="">
+                    <label for="Username" class="label">Username</label>
+                    <input type="text" placeholder="Enter your username" name="Username" required="">
+                    <label for="psw" class="label">Password</label>
+                    <input type="password" placeholder="Enter your Password" name="psw" required="">
+                    <label for="confirmpassword" class="label">Confirm Password</label>
+                    <input type="password" placeholder="Re-enter your password " name="confirmpassword" required="">
+                    <div class="clearfix">
+                            <button type="submit" class="signupbtn">Sign Up</button>
+                       <!-- To add the cacell Button<button type="button" class="cancelbtn">Clear</button>-->
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+  
+   
+
+    
+</div>
     <div>
 
         <!-- post 1 starts here -->
-        <div>
-            <div>
+        <div class="post">
+            <div class="post-left">
                 <p>Srishti Gupta</p>
             </div>
 
-            <div>
+            <div class="post-right">
                 <div>
-                    <p>‘let’ me be a ‘const’(ant), not a ‘var’(iable)!</p>
+                    <p class="post-head">‘let’ me be a ‘const’(ant), not a ‘var’(iable)!</p>
                     <span>
                         <!-- TODO: Include Font Awesome icon for delete icon here -->
                     </span>
@@ -125,6 +196,9 @@
 
     </div>
     <!-- list of all posts ends here -->
+    <script src="../scripts/common.js">
+      
+    </script>
 </body>
 
 </html>
