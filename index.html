@@ -80,7 +80,7 @@
             
     </div>
     <div class="bodyButtons">
-        <input type="button" id="allPosts" value="All Posts" class="postButtons">
+        <input type="button" id="allPosts" value="All Posts" class="postButtons" onclick="getAllPosts()">
         <input type="button" id="createPost" value="Create Post" class="postButtons" onclick="openCreatePost()">
          
 
@@ -100,9 +100,9 @@
                 <input type="text" placeholder="Enter title of your post" name="title" required="">
 
                 <label for="contents" class="label">
-                    <b>Contents</b>
+                    <p>Contents</p>
                 </label>
-               <textarea rows="20" cols="27" placeholder="Enter the contents of your post"></textarea>
+               <textarea rows="20" cols="37" placeholder="Enter the contents of your post"></textarea>
                 <div class="clearfix">
                     
                     <button type="submit" class="newPostSubmit">Create</button>
