@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- TODO: Include Font Awesome file here -->
+    <!-- TODO: Include Google Fonts file here -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montez|Ubuntu+Mono&display=swap" rel="stylesheet">
+
+    <link href="../styles/common.css" rel="stylesheet">
+    <link href="../styles/postslist.css" rel="stylesheet">
+    <link href="../styles/post.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- TODO: Include code for header here -->
+
+    <!-- ATTENTION: The HTML code for the list of posts has been given to you. You can feel free to add/delete/modify this code. You need to write the proper CSS and JavaScript code corresponding to this page so that the result looks like the screenshots given to you in the Project Statement. -->
+
+    <!-- list of all posts starts here -->
+    <div class="header" id="myHeader">
+
+
+
+        <input id="signIn" class="topButtons" type="button" onclick="signInModal()" value="Sign In">
+        <input id="signUp" class="topButtons" type="button" onclick="signUpModal()" value="Sign Up">
+        <a id="pageTitle" class="logo">Scribbler</a>
+        <p class="logoText">Explore, Imagine, Create</p>
+        <!-- The Modal -->
+
+
+        <div id="signInModal" class="modal" style="display: none;">
+            <form class="modal-content" action="/action_page.php">
+                <span onclick="onClose()" class="close_signIn" title="Close Modal">×</span>
+                <div class="container">
+                    <h1>Welcome Back!</h1>
+                    <hr>
+                    <label for="Username" class="label">
+                        <b>Username</b>
+                    </label>
+                    <input type="text" placeholder="Enter Username" name="Username" required="">
+
+                    <label for="psw" class="label">
+                        <b>Password</b>
+                    </label>
+                    <input type="password" placeholder="Enter Password" name="psw" required="">
+                    <div class="clearfix">
+
+                        <button type="submit" class="signinbtn">Sign In</button>
+                    </div>
+                </div>
+                <div id="signUpPrompt" class="signUpForm">Not a member?
+                    <span id="" class="signUpForm" onclick="openSignUp()">Sign Up</span>
+                </div>
+            </form>
+        </div>
+        <div id="signUpModal" class="modal" style="display: none;">
+            <div class="modal-content-sigup">
+                <span onclick="onClose()" class="close_signIn" title="Close Modal">×</span>
+                <form class="modal-content-sigUp" action="/action_page.php">
+                    <div class="container-signUp">
+
+                        <h1>Get Started</h1>
+                        <hr>
+                        <label for="name" class="label">Name</label>
+                        <input type="text" placeholder="Enter your Name" name="name" required="">
+                        <label for="Username" class="label">Username</label>
+                        <input type="text" placeholder="Enter your username" name="Username" required="">
+                        <label for="psw" class="label">Password</label>
+                        <input type="password" placeholder="Enter your Password" name="psw" required="">
+                        <label for="confirmpassword" class="label">Confirm Password</label>
+                        <input type="password" placeholder="Re-enter your password " name="confirmpassword" required="">
+                        <div class="clearfix">
+                            <button type="submit" class="signupbtn">Sign Up</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- post content starts here-->
+        <div class="postContent">
+            <div id="postTitle" class="postTite">
+                <h id="postTitleNew">Everything you should know about ‘module’ & ‘require’ in Node.js</h>
+            </div>
+            <div class="postAuthor">
+                <button type="button" id="editPostClick" class="editPostButton" onclick="editPost()">Edit <i
+                        class="fa fa-edit"></i> </button>
+                <p>Srishti Gupta</p>
+            </div>
+            <div class="postText">
+                <p id="postBody">
+                    Node.js treats each JavaScript file as a separate module. For instance, if you have a file
+                    containing some code and this file is named xyz.js, then this file is treated as a module in Node,
+                    and you can say that you’ve created a module
+                    named xyz. </p>
+            </div>
+            <div class="likePostButton">
+                <button id="likePost" onclick="postLiked()">
+                    <i class="fa fa-thumbs-up"> Like</i>
+
+                </button>
+                <span id="commentCount">Be the first one to like this!</span>
+            </div>
+            <div class="commentContainer">
+                <form class="commentBody">
+                    <label for="commentContent"></label>
+                    <textarea placeholder="Leave a comment..." id="commentContent" rows="5" cols="80"
+                        name="Content"></textarea> <br>
+                    <button type="button" class="newComment" onclick="addComment()">Comment</button>
+                </form>
+                <p class="allCommentsHeading">All Comments</p>
+                <div class="allCommentsBox" id="commentBox">
+                    <div class="contentOfComment">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <script src="../scripts/post.js"></script>
+    <script src="../scripts/common.js">
+    </script>
+</body>
+
+</html>
