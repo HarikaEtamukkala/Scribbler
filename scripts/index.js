@@ -4,3 +4,7 @@ function createPost() {
 function getAllPosts() {
     window.location.href= "./html/postslist.html";
 }
+function onClose() {
+    document.getElementById('newPostModal').style.display='none';
+    
+}
