@@ -15,3 +15,7 @@ function onDeletePost(post){
       document.getElementById(postId).style.display='none';
       document.getElementById('deletePostPrompt').style.display='none';
   }
+
+  function fullPost(){
+    window.location.href="./post.html";
+  }

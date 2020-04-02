@@ -1,6 +1,4 @@
-{
-    box-sizing: border-box}
-/* Full-width input fields */
+
 
 input[type=text], input[type=password] {
     width: 100%;
@@ -159,8 +157,9 @@ hr {
     }
 
     h1{
-        text-align: center;
+        text-align: left;
         font-family: 'Abel', sans-serif;
+        font-size: 20px;
     }
   input.topButtons {
     width: 90px;
