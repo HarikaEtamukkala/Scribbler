@@ -5,120 +5,120 @@
     <!-- TODO: Include Font Awesome file here -->
     <!-- TODO: Include Google Fonts file here -->
     <link href="https://fonts.googleapis.com/css?family=Montez|Ubuntu+Mono&display=swap" rel="stylesheet">
-    <link href="styles/index.css" rel="stylesheet"> 
+    <link href="styles/index.css" rel="stylesheet">
     <link href="styles/common.css" rel="stylesheet">
     <link href="styles/index.css" rel="stylesheet">
-  
+
 </head>
 
 <body>
     <!-- TODO: Include all your code for the header and home page here -->
     <div class="header" id="myHeader">
-          
-        
-        
-                <input id="signIn" class="topButtons" type="button" onclick="signInModal()" value="Sign In">
-                <input id="signUp" class="topButtons" type="button" onclick="signUpModal()" value="Sign Up">
-               <a id="pageTitle" class="logo">Scribbler</a>
-               <p class="logoText">Explore, Imagine, Create</p>
-                <!-- The Modal -->
-               
 
-                <div id="signInModal" class="modal" style="display: none;">
-                    <form class="modal-content" action="/action_page.php">
-                        <span onclick="onClose()" class="close_signIn" title="Close Modal">×</span>
-                        <div class="container">
-                        <h1>Welcome Back!</h1>
-                        <hr>
-                        <label for="Username" class="label">
-                            <b>Username</b>
-                        </label>
-                        <input type="text" placeholder="Enter Username" name="Username" required="">
-        
-                        <label for="psw" class="label">
-                            <b>Password</b>
-                        </label>
-                        <input type="password" placeholder="Enter Password" name="psw" required="">
-                        <div class="clearfix">
-                            
-                            <button type="submit" class="signinbtn">Sign In</button>
-                        </div>
+
+
+        <input id="signIn" class="topButtons" type="button" onclick="signInModal()" value="Sign In">
+        <input id="signUp" class="topButtons" type="button" onclick="signUpModal()" value="Sign Up">
+        <a id="pageTitle" class="logo">Scribbler</a>
+        <p class="logoText">Explore, Imagine, Create</p>
+        <!-- The Modal -->
+
+
+        <div id="signInModal" class="modal" style="display: none;">
+            <form class="modal-content" action="/action_page.php">
+                <span onclick="onClose()" class="close_signIn" title="Close Modal">×</span>
+                <div class="container">
+                    <h1>Welcome Back!</h1>
+                    <hr>
+                    <label for="Username" class="label">
+                        <b>Username</b>
+                    </label>
+                    <input type="text" placeholder="Enter Username" name="Username" required="">
+
+                    <label for="psw" class="label">
+                        <b>Password</b>
+                    </label>
+                    <input type="password" placeholder="Enter Password" name="psw" required="">
+                    <div class="clearfix">
+
+                        <button type="submit" class="signinbtn">Sign In</button>
                     </div>
-                    <div id="signUpPrompt" class="signUpForm">Not a member?
-                        <span id="" class="signUpForm" onclick="openSignUp()">Sign Up</span>
+                </div>
+                <div id="signUpPrompt" class="signUpForm">Not a member?
+                    <span id="" class="signUpForm" onclick="openSignUp()">Sign Up</span>
+                </div>
+            </form>
+        </div>
+        <div id="signUpModal" class="modal" style="display: none;">
+            <div class="modal-content-sigup">
+                <span onclick="onClose()" class="close_signIn" title="Close Modal">×</span>
+                <form class="modal-content-sigUp" action="/action_page.php">
+                    <div class="container-signUp">
+
+                        <h1>Get Started</h1>
+                        <hr>
+                        <label for="name" class="label">Name</label>
+                        <input type="text" placeholder="Enter your Name" name="name" required="">
+                        <label for="Username" class="label">Username</label>
+                        <input type="text" placeholder="Enter your username" name="Username" required="">
+                        <label for="psw" class="label">Password</label>
+                        <input type="password" placeholder="Enter your Password" name="psw" required="">
+                        <label for="confirmpassword" class="label">Confirm Password</label>
+                        <input type="password" placeholder="Re-enter your password " name="confirmpassword" required="">
+                        <div class="clearfix">
+                            <button type="submit" class="signupbtn">Sign Up</button>
+                            <!-- To add the cacell Button<button type="button" class="cancelbtn">Clear</button>-->
+
+                        </div>
                     </div>
                 </form>
             </div>
-            <div id="signUpModal" class="modal" style="display: none;">
-                <div class="modal-content-sigup">
-                    <span onclick="onClose()" class="close_signIn" title="Close Modal">×</span>
-                    <form class="modal-content-sigUp" action="/action_page.php">
-                        <div class="container-signUp">
-        
-                            <h1>Get Started</h1>
-                            <hr>
-                            <label for="name" class="label">Name</label>
-                            <input type="text" placeholder="Enter your Name" name="name" required="">
-                            <label for="Username" class="label">Username</label>
-                            <input type="text" placeholder="Enter your username" name="Username" required="">
-                            <label for="psw" class="label">Password</label>
-                            <input type="password" placeholder="Enter your Password" name="psw" required="">
-                            <label for="confirmpassword" class="label">Confirm Password</label>
-                            <input type="password" placeholder="Re-enter your password " name="confirmpassword" required="">
-                            <div class="clearfix">
-                                    <button type="submit" class="signupbtn">Sign Up</button>
-                               <!-- To add the cacell Button<button type="button" class="cancelbtn">Clear</button>-->
-                                
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-          
-           
-        
-            
+        </div>
+
+
+
+
     </div>
     <div class="bodyButtons">
         <input type="button" id="allPosts" value="All Posts" class="postButtons" onclick="getAllPosts()">
         <input type="button" id="createPost" value="Create Post" class="postButtons" onclick="openCreatePost()">
-         
+
 
         <div id="newPostModal" class="modal" style="display: none;">
             <div class="newPost-Content">
-            <form class="newPostForm" action="/action_page.php">
-                <span onclick="onClosePostModal()" class="close_signIn" title="Close Modal">×</span>
-                <div class="container-signUp">
-                 <div class="newpostHeading">
-                    <h4>Pen Your Post</h4>
-                 </div>   
-              
-                <hr>
-                <label for="title" class="">
-                    <b>Title</b>
-                </label>
-                <input type="text" placeholder="Enter title of your post" name="title" required="">
+                <form class="newPostForm" action="/action_page.php">
+                    <span onclick="onClosePostModal()" class="close_signIn" title="Close Modal">×</span>
+                    <div class="container-signUp">
+                        <div class="newpostHeading">
+                            <h4>Pen Your Post</h4>
+                        </div>
 
-                <label for="contents" class="label">
-                    <p>Contents</p>
-                </label>
-               <textarea rows="15" cols="120" placeholder="Enter the contents of your post"></textarea>
-                <div class="clearfix">
-                    
-                    <button type="submit" class="newPostSubmit">Create</button>
-                </div>
+                        <hr>
+                        <label for="title" class="">
+                            <b>Title</b>
+                        </label>
+                        <input type="text" placeholder="Enter title of your post" name="title" required="">
+
+                        <label for="contents" class="label">
+                            <p>Contents</p>
+                        </label>
+                        <textarea rows="15" cols="120" placeholder="Enter the contents of your post"></textarea>
+                        <div class="clearfix">
+
+                            <button type="submit" class="newPostSubmit">Create</button>
+                        </div>
+                    </div>
+
+                </form>
             </div>
-           
-        </form>
         </div>
-    </div>
-   
+
     </div>
     <script src="scripts/common.js">
-      
+
     </script>
     <script src="scripts/index.js"></script>
-    
+
 </body>
 
 </html>

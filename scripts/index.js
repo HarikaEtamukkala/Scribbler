@@ -1,10 +1,10 @@
 function createPost() {
-    document.getElementById('createPostModal').style.display='block';
+    document.getElementById('createPostModal').style.display = 'block';
 }
 function getAllPosts() {
-    window.location.href= "./html/postslist.html";
+    window.location.href = "./html/postslist.html";
 }
 function onClosePostModal() {
-    document.getElementById('newPostModal').style.display='none';
-    
+    document.getElementById('newPostModal').style.display = 'none';
+
 }
