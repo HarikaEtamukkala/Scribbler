@@ -132,7 +132,7 @@ hr {
     background-color: #fefefe;
     margin: auto auto 5% auto;
     border: 1px solid #fff;
-    width: 30%;
+    width: 25%;
     opacity: 1;
     overflow: auto;
     font-family: 'Abel', sans-serif;
@@ -160,6 +160,7 @@ hr {
         text-align: left;
         font-family: 'Abel', sans-serif;
         font-size: 20px;
+        color: lightslategray;
     }
   input.topButtons {
     width: 90px;
